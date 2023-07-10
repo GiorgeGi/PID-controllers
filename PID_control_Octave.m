@@ -94,6 +94,6 @@ switch choice
   
   otherwise
     
-    printf("Choose 1, 2, 3, or 4\n")
+    printf("Choose 1, 2, 3, or 4\n")      % Change "printf" to "fprintf" for the code to work in MATLAB
 
 endswitch       % Change "endswitch" to "end" for the code to work in MATLAB
