@@ -12,6 +12,7 @@ clear                       % Clear the workspace variables
 clc                         % Clear the command window
 close all                   % Close all open figure windows
 
+% S = 1 / (s^2 + 3s + 1)
 num = [1];                  % Define the numerator of the system transfer function
 den = [1 3 1];              % Define the denominator of the system transfer function
 S = tf(num, den);           % Create a transfer function object S using the numerator and denominator coefficients
@@ -34,6 +35,7 @@ switch choice
     Kp = input("Enter the value of the proportional gain Kp: ");
     
     % Create a PID controller object with the specified gain
+    % GC = Kp + Ki*(1/s) + Kd*s
     GC = pid(Kp);   
     % Create a new closed-loop transfer function connecting the system GC*S and the feedback path H    
     MC = feedback(GC*S, H); 
@@ -94,6 +96,6 @@ switch choice
   
   otherwise
     
-    printf("Choose 1, 2, 3, or 4\n")      % Change "printf" to "fprintf" for the code to work in MATLAB
+    printf("Choose 1, 2, 3, or 4\n")  % Change "printf" to "fprintf" for the code to work in MATLAB
 
 endswitch       % Change "endswitch" to "end" for the code to work in MATLAB
