@@ -25,7 +25,7 @@ hold on;                    % Allow multiple plots on the same figure
 
 
 
-choice = input("Choose P (1), PI(2), PD (3), or PID (4): ");
+choice = input("Choose P (1), PI (2), PD (3), or PID (4): ");
 switch choice
   
   case 1
