@@ -47,7 +47,7 @@ switch choice
     % By design legends are enclosed in a box, remove it
     legend boxoff;
     % Graph title
-    title("Proportional Derivative Controller");
+    title("Proportional Controller");
     
   case 2
   
