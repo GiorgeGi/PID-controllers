@@ -24,6 +24,9 @@ step(M, 'p--b');            % Plot the step response of the closed-loop system M
 
 hold on;                    % Allow multiple plots on the same figure
 
+%line([0, 100], [1, 1], 'Color', 'red', 'LineStyle', '--', 'LineWidth', 2);       % In Octave the transfer function is not getting plotted
+                                                                                  % Uncomment this to draw a line similar to the transfer function in Octave
+
 
 
 choice = input("Choose P (1), PI (2), PD (3), or PID (4): ");
@@ -40,6 +43,7 @@ switch choice
     MC = feedback(GC*S, H); 
     % Plot the step response
     step(MC, '*-.g');
+    
     
     % Initiallize graph grid
     grid on;
@@ -59,6 +63,7 @@ switch choice
     MC = feedback(GC*S, H);
     step(MC, '*-.g');
     
+    
     grid on;
     legend({strcat("Open Loop"), strcat("Kp=", num2str(Kp), ", Ki=", num2str(Ki))}, "location", "southeast");
     legend boxoff;
@@ -72,6 +77,7 @@ switch choice
     GC = pid(Kp, Kd);
     MC = feedback(GC*S, H);
     step(MC, '*-.g');
+    
     
     grid on;
     legend({strcat("Open Loop"), strcat("Kp=", num2str(Kp), ", Kd=", num2str(Kd))}, "location", "southeast");
@@ -87,6 +93,7 @@ switch choice
     GC = pid(Kp, Ki, Kd);
     MC = feedback(GC*S, H);
     step(MC, '*-.g');
+    
     
     grid on;
     legend({strcat("Open Loop"), strcat("Kp=", num2str(Kp), ", Ki=", num2str(Ki), ", Kd=", num2str(Kd))}, "location", "southeast");
