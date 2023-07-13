@@ -1,5 +1,6 @@
 %{
 This is a program for testing out PID algorithms
+It works for MATLAB and Octave
 It can generate graphs for the four common control systems: P, PI, PD and PID for measurements and analysis
 The program is flexible and does not require changes in the code structure for repeated testing
 %}
@@ -11,11 +12,11 @@ clc                         % Clear the command window
 close all                   % Close all open figure windows
 
 % S = 1 / (s^2 + 3s + 1)
-num = 1;                  % Define the numerator of the system transfer function
+num = 1;                    % Define the numerator of the system transfer function
 den = [1 3 1];              % Define the denominator of the system transfer function
 S = tf(num, den);           % Create a transfer function object S using the numerator and denominator coefficients
 
-H = 1;                    % Define the transfer function of the feedback path, which is simply 1
+H = 1;                      % Define the transfer function of the feedback path, which is simply 1
 
 M = feedback(S, H);         % Create a closed-loop transfer function M by connecting the system S and the feedback path H
 
