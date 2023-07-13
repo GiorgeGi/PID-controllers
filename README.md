@@ -9,4 +9,4 @@ A great image describing the theory behind step response can be seen here "https
 It has been tested and if the gain values are correct, the graph will prove their accuracy; helping in development by speeding up the real time testing proccess.
 It contains loop statements for testing multiple sets of gain values per controller without repeatedly executing the script.
 The project works both in MATLAB and Octave. For MATLAB simply comment out any package loads.
-In MATLAB it also prints the transfer function H while in octave does not.
+In MATLAB it also prints the transfer function H while in octave does not, but there is a commented command that solves the issue.
