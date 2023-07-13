@@ -6,7 +6,7 @@ The program is flexible and does not require changes in the code structure for r
 %}
 
 
-
+pkg load control            % Imports control package, comment out for MATLAB
 clear                       % Clear the workspace variables
 clc                         % Clear the command window
 close all                   % Close all open figure windows
